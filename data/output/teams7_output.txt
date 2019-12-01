@@ -1,0 +1,7 @@
+Belgium is not eliminated
+China is eliminated by the subset of R = { France }
+Ireland is eliminated by the subset of R = { France U.S.A. Germany }
+Germany is not eliminated
+England is not eliminated
+U.S.A. is not eliminated
+France is not eliminated

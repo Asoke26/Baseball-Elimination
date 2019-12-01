@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Baseball_Elimination"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Baseball_Elimination">
+				<Option output="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Baseball_Elimination" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 Baseball_Elimination"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Baseball_Elimination/fast">
+				<Option output="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Baseball_Elimination" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 Baseball_Elimination/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowEdge.cpp">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowEdge.h">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowGraph.cpp">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowGraph.h">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/main.cpp">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

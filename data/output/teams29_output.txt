@@ -1,0 +1,29 @@
+Orlando is eliminated by the subset of R = { Cleveland }
+Golden_State is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Cleveland is not eliminated
+New_Orleans is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Chicago is not eliminated
+Boston is not eliminated
+Minnesota is not eliminated
+Denver is not eliminated
+Indiana is eliminated by the subset of R = { Cleveland }
+Seattle is not eliminated
+Toronto is eliminated by the subset of R = { Dallas Philadelphia Atlanta Denver Boston Chicago Cleveland }
+Sacramento is not eliminated
+Detroit is eliminated by the subset of R = { Dallas Philadelphia Atlanta Denver Boston Chicago Cleveland }
+Houston is eliminated by the subset of R = { Dallas Philadelphia Atlanta Denver Boston Chicago Cleveland }
+Phoenix is eliminated by the subset of R = { Dallas Philadelphia Atlanta Denver Boston Chicago Cleveland }
+Atlanta is not eliminated
+Philadelphia is not eliminated
+LA_Lakers is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Utah is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+San_Antonio is eliminated by the subset of R = { Dallas Philadelphia Atlanta Denver Boston Chicago Cleveland }
+New_York is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Memphis is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Dallas is not eliminated
+Washington is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Portand is eliminated by the subset of R = { Dallas Philadelphia Atlanta Sacramento Denver Boston Chicago Cleveland }
+New_Jersey is eliminated by the subset of R = { Dallas Atlanta Denver Boston Chicago Cleveland }
+Milwaukee is not eliminated
+Miami is not eliminated
+LA_Clippers is eliminated by the subset of R = { Cleveland }

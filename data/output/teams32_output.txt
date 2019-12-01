@@ -1,0 +1,32 @@
+Team25 is eliminated by the subset of R = { Team11 Team8 Team6 Team0 Team26 }
+Team14 is eliminated by the subset of R = { Team6 }
+Team26 is not eliminated
+Team15 is not eliminated
+Team27 is not eliminated
+Team16 is not eliminated
+Team28 is eliminated by the subset of R = { Team26 }
+Team17 is eliminated by the subset of R = { Team6 }
+Team29 is eliminated by the subset of R = { Team11 Team8 Team6 Team0 Team26 }
+Team18 is not eliminated
+Team19 is not eliminated
+Team0 is not eliminated
+Team1 is not eliminated
+Team2 is eliminated by the subset of R = { Team26 }
+Team3 is eliminated by the subset of R = { Team26 }
+Team4 is not eliminated
+Team5 is not eliminated
+Team6 is not eliminated
+Team30 is not eliminated
+Team7 is not eliminated
+Team31 is not eliminated
+Team20 is not eliminated
+Team8 is not eliminated
+Team21 is not eliminated
+Team10 is not eliminated
+Team9 is not eliminated
+Team22 is not eliminated
+Team11 is not eliminated
+Team23 is not eliminated
+Team12 is eliminated by the subset of R = { Team6 }
+Team24 is not eliminated
+Team13 is eliminated by the subset of R = { Team6 }

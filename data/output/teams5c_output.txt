@@ -1,0 +1,5 @@
+Florida is not eliminated
+Atlanta is not eliminated
+Philadelphia is eliminated by the subset of R = { Atlanta Florida }
+New_York is not eliminated
+Washington is eliminated by the subset of R = { Florida }

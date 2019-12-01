@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowEdge.h
+
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowGraph.h
+vector
+-
+flowEdge.h
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowEdge.h
+
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+vector
+-
+flowEdge.h
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowEdge.h
+flowGraph.h
+/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowGraph.h
+

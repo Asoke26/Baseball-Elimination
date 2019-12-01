@@ -1,0 +1,5 @@
+New_York is not eliminated
+Detroit is eliminated by the subset of R = { Baltimore Boston Toronto New_York }
+Toronto is not eliminated
+Boston is not eliminated
+Baltimore is not eliminated
