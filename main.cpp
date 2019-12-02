@@ -4,8 +4,11 @@
 #include <vector>
 #include "flowEdge.h"
 #include "flowGraph.h"
+#include <unordered_set>
+
 
 using namespace std;
+template <typename team>
 
 int MAX_NUM_WINS = 0;
 
@@ -47,9 +50,11 @@ class team
 
 team process_input(string line,int number_of_teams);
 void trivialElimination(vector<team> &all_teams);
+flowGraph buildGraphfor(int team, int NUM_OF_TEAMS);
 
 int main(int argc, char *argv[]) {
     vector<team> all_teams;
+
 
     /************************** Start Input file Processiiing*********************************************/
     ifstream infile;
@@ -64,19 +69,31 @@ int main(int argc, char *argv[]) {
 
 
     string test;
-    int number_of_teams;
+    int NUM_OF_TEAMS;
     int first_line=0;
+    int *game;
     while (infile){
         first_line ++;
         getline(infile,test);
-        if(first_line == 1) number_of_teams =  stoi(test);
+        if(first_line == 1){
+            NUM_OF_TEAMS =  stoi(test);
+            game = new int[NUM_OF_TEAMS*NUM_OF_TEAMS];
+        }
         else{
-            team t1= process_input(test,number_of_teams);
+            team t1= process_input(test,NUM_OF_TEAMS);
             all_teams.push_back(t1);
         }
     }
     infile.close();
     /***************************End Input file Processiiing************************************************/
+
+    // Update game matrix
+    for (int i =0; i < all_teams.size();i++)
+    {
+        for(int j = 0; j< all_teams[i].against.size();j++){
+            game[i*NUM_OF_TEAMS + j] = all_teams[i].against[j];
+        }
+    }
 
 
     trivialElimination(all_teams); // Chekcing Trivial elimination condition
@@ -86,10 +103,7 @@ int main(int argc, char *argv[]) {
         all_teams[i].team_print();
     }
 
-//    all_teams[0].team_print();
 
-//    for(int i=0;i<all_teams[0].against.size();i++)cout<<all_teams[0].against[i];
-//    cout<<endl;
 
 
     return 0;
@@ -137,4 +151,16 @@ void trivialElimination(vector<team> &all_teams)
         if (all_teams[i].wins + all_teams[i].remaining < MAX_NUM_WINS)
             all_teams[i].isEliminated = true;
     }
+}
+
+flowGraph buildGraphfor(int team, int NUM_OF_TEAMS){
+    int source = NUM_OF_TEAMS;
+    int sink = NUM_OF_TEAMS + 1;
+    int gameNode = NUM_OF_TEAMS + 2;
+
+    int possibleMaxwin =
+    unordered_set<flowEdge> edges;
+
+    int
+
 }

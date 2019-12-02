@@ -96,6 +96,12 @@
 		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/flowGraph.h">
 			<Option target="Baseball_Elimination"/>
 		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/fordFulkerson.cpp">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
+		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/fordFulkerson.h">
+			<Option target="Baseball_Elimination"/>
+		</Unit>
 		<Unit filename="/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/main.cpp">
 			<Option target="Baseball_Elimination"/>
 		</Unit>
