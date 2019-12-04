@@ -177,33 +177,6 @@ flowGraph.cpp.s:
 	$(MAKE) -f CMakeFiles/Baseball_Elimination.dir/build.make CMakeFiles/Baseball_Elimination.dir/flowGraph.cpp.s
 .PHONY : flowGraph.cpp.s
 
-fordFulkerson.o: fordFulkerson.cpp.o
-
-.PHONY : fordFulkerson.o
-
-# target to build an object file
-fordFulkerson.cpp.o:
-	$(MAKE) -f CMakeFiles/Baseball_Elimination.dir/build.make CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.o
-.PHONY : fordFulkerson.cpp.o
-
-fordFulkerson.i: fordFulkerson.cpp.i
-
-.PHONY : fordFulkerson.i
-
-# target to preprocess a source file
-fordFulkerson.cpp.i:
-	$(MAKE) -f CMakeFiles/Baseball_Elimination.dir/build.make CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.i
-.PHONY : fordFulkerson.cpp.i
-
-fordFulkerson.s: fordFulkerson.cpp.s
-
-.PHONY : fordFulkerson.s
-
-# target to generate assembly for a file
-fordFulkerson.cpp.s:
-	$(MAKE) -f CMakeFiles/Baseball_Elimination.dir/build.make CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.s
-.PHONY : fordFulkerson.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -246,9 +219,6 @@ help:
 	@echo "... flowGraph.o"
 	@echo "... flowGraph.i"
 	@echo "... flowGraph.s"
-	@echo "... fordFulkerson.o"
-	@echo "... fordFulkerson.i"
-	@echo "... fordFulkerson.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

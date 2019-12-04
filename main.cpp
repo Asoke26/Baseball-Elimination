@@ -2,61 +2,34 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <unordered_set>
+#include <iostream>
+#include <bits/stdc++.h>
+
 #include "flowEdge.h"
 #include "flowGraph.h"
-#include <unordered_set>
-
 
 using namespace std;
-template <typename team>
 
 int MAX_NUM_WINS = 0;
+int NUM_OF_TEAMS = 0;
 
-/*Creating a data structure to hold each team stat*/
-class team
-{
-    public:
-    int name; // Team name
-    int wins; // Number of wins
-    int losses; // Number of losses
-    int remaining; // Number of remaining matches
-    bool isEliminated;
+//*********************************************//
+vector<int> wins;
+vector<int> losses;
+vector<int> remaining;
+vector<bool> isEliminated;
 
-    vector<int> against; // Remaining with whom
+vector<vector<int>> games;
+//*********************************************//
 
-    team(){
-        name = -1;
-        wins = 0;
-        losses = 0;
-        remaining = 0;
-        isEliminated = false;
-    }
 
-    void team_print(){
-        cout<<"Name # "<<name<<endl;
-        cout<<"Wins #"<<wins<<endl;
-        cout<<"Losses # "<<losses<<endl;
-        cout<<"Remaining # "<<remaining<<endl;
-        cout<<"Is Eliminated # "<<boolalpha<<isEliminated<<endl;
-        cout<< "Max number of wins among all team # "<<MAX_NUM_WINS<<endl;
-        cout<<"Against stat: ";
-        for(int i =0; i<against.size();i++)
-        {
-            cout<<against[i]<<" ";
-        }
-        cout<<endl;
-    }
-};
-
-team process_input(string line,int number_of_teams);
-void trivialElimination(vector<team> &all_teams);
-flowGraph buildGraphfor(int team, int NUM_OF_TEAMS);
+void trivialElimination();
+void buildFlowNetwork(int id);
 
 int main(int argc, char *argv[]) {
-    vector<team> all_teams;
 
-
-    /************************** Start Input file Processiiing*********************************************/
+    /************************** Start Input file Preprocessing*********************************************/
     ifstream infile;
     infile.open(argv[1]);
 
@@ -69,98 +42,147 @@ int main(int argc, char *argv[]) {
 
 
     string test;
-    int NUM_OF_TEAMS;
-    int first_line=0;
-    int *game;
-    while (infile){
-        first_line ++;
+    getline(infile,test);
+    NUM_OF_TEAMS =  stoi(test);
+
+    for (int i =0;i<NUM_OF_TEAMS ;i++)
+    {
         getline(infile,test);
-        if(first_line == 1){
-            NUM_OF_TEAMS =  stoi(test);
-            game = new int[NUM_OF_TEAMS*NUM_OF_TEAMS];
+        vector<int> tempVec;
+        string temp = "";
+        for(int i =0;i<test.length();i++){
+            if(test[i] == ' '){
+                tempVec.push_back(stoi(temp));
+                temp = "";
+            }
+            else{
+                temp+=test[i];
+            }
+
+            if(i==test.length()-1){
+                tempVec.push_back(stoi(temp));
+                temp = "";
+            }
         }
-        else{
-            team t1= process_input(test,NUM_OF_TEAMS);
-            all_teams.push_back(t1);
+
+
+        int id = tempVec[0];
+        wins.push_back(tempVec[1]);
+        losses.push_back(tempVec[2]);
+        remaining.push_back(tempVec[3]);
+
+        games.push_back(vector<int>());
+        for(int i = 4; i<tempVec.size();i++)
+        {
+            games[id].push_back(tempVec[i]);
         }
+
     }
     infile.close();
-    /***************************End Input file Processiiing************************************************/
+    /***************************End Input file Processing************************************************/
 
-    // Update game matrix
-    for (int i =0; i < all_teams.size();i++)
+
+    for(int i = 0; i<wins.size();i++)
     {
-        for(int j = 0; j< all_teams[i].against.size();j++){
-            game[i*NUM_OF_TEAMS + j] = all_teams[i].against[j];
+        cout<<wins[i]<<"-";
+    }
+    cout<<endl;
+
+    for(int i = 0; i<losses.size();i++)
+    {
+        cout<<losses[i]<<"-";
+    }
+    cout<<endl;
+
+    for(int i = 0; i<remaining.size();i++)
+    {
+        cout<<remaining[i]<<"-";
+    }
+    cout<<endl;
+
+    for(int i = 0; i<games.size();i++)
+    {
+        for(int j = 0; j<games[i].size();j++)
+        {
+            cout<<games[i][j]<<"-";
         }
+        cout<<endl;
     }
 
 
-    trivialElimination(all_teams); // Chekcing Trivial elimination condition
 
-    for (int i =0; i < all_teams.size();i++)
+    trivialElimination(); // Chekcing Trivial elimination condition
+
+    for(int i = 0; i<isEliminated.size();i++)
     {
-        all_teams[i].team_print();
+        cout<<isEliminated[i]<<"-";
     }
+    cout<<endl;
 
+    // 2. Build Flow Graph
+    buildFlowNetwork(2);
 
-
+    // 3. RUN Ford Fulkerson
+        // 3.1 Constructor (Algo) - If has augmenting path. Then save it. Find the bottleneck and update the graph
+        // 3.2 Has Augmenting Path
+        // 3.3 Update Flowgraph
+    // 4. Check If all path are saturated for that team
 
     return 0;
 }
 
-/*Processing Input*/
-team process_input(string line,int number_of_teams)
+
+
+
+void trivialElimination()
 {
-    team sample_team;
-    string temp="";
-    vector <int> tempVec;
-    for(int i =0;i<line.length();i++){
-        if(line[i] == ' '){
-            tempVec.push_back(stoi(temp));
-            temp = "";
+    int MAX_WINS = *max_element(wins.begin(),wins.end());
+
+    for(int i =0; i < NUM_OF_TEAMS; i++)
+    {
+        if (wins[i] + remaining[i] < MAX_WINS)
+        {
+            isEliminated.push_back(1);
         }
         else{
-            temp+=line[i];
-        }
-
-        if(i==line.length()-1){
-            tempVec.push_back(stoi(temp));
-            temp = "";
+            isEliminated.push_back(0);
         }
     }
-    // Assigning value to the data-structure
-    sample_team.name = tempVec[0];
-    sample_team.wins = tempVec[1];
-    sample_team.losses = tempVec[2];
-    sample_team.remaining = tempVec[3];
 
-    // Getting Maximum wins among all the teams
-    if (sample_team.wins > MAX_NUM_WINS) MAX_NUM_WINS = sample_team.wins;
-
-    for(int i=4;i<tempVec.size();i++)sample_team.against.push_back(tempVec[i]);
-
-    return sample_team;
 }
 
-
-void trivialElimination(vector<team> &all_teams)
+void buildFlowNetwork(int id)
 {
-    for (int i =0; i < all_teams.size();i++)
-    {
-        if (all_teams[i].wins + all_teams[i].remaining < MAX_NUM_WINS)
-            all_teams[i].isEliminated = true;
+    int source = -1;
+    int sink = 100;
+
+    int possibleMaxWin = wins[id] + remaining[id];
+    vector<flowEdge> all_edges;
+
+    for(int i=0;i<NUM_OF_TEAMS;i++){
+        if(i == id || wins[i]+remaining[i] < MAX_NUM_WINS || i+1 == NUM_OF_TEAMS) continue;
+        for(int j=i+1;j<NUM_OF_TEAMS;j++)
+        {
+            if(j == id || wins[i]+remaining[i] < MAX_NUM_WINS) continue;
+            cout<<"I "<<i<<" J"<<j<<endl;
+            int gameNode = i+NUM_OF_TEAMS+j;
+
+            all_edges.push_back(flowEdge(source,gameNode,games[i][j],0));
+            all_edges.push_back(flowEdge(gameNode,i,INT8_MAX,0));
+            all_edges.push_back(flowEdge(gameNode,j,INT8_MAX,0));
+
+        }
     }
-}
 
-flowGraph buildGraphfor(int team, int NUM_OF_TEAMS){
-    int source = NUM_OF_TEAMS;
-    int sink = NUM_OF_TEAMS + 1;
-    int gameNode = NUM_OF_TEAMS + 2;
+    for(int i=0;i<NUM_OF_TEAMS;i++)
+    {
+        if(i == id )continue;
+        all_edges.push_back(flowEdge(i,sink,possibleMaxWin-wins[i],0));
+    }
 
-    int possibleMaxwin =
-    unordered_set<flowEdge> edges;
 
-    int
+    for(flowEdge edge : all_edges){
+        cout<<"source "<<edge.from<<" terget "<<edge.to<<" capacity "<<edge.capacity<<" flow "<<edge.flow<<endl;
+    }
 
 }
