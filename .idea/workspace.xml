@@ -12,27 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="826e7a27-cf4d-4e21-a412-31d27a48fcc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fordFulkerson.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fordFulkerson.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowEdge.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowEdge.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowGraph.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowGraph.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/flowEdge.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flowEdge.h" beforeDir="false" afterPath="$PROJECT_DIR$/flowEdge.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fordFulkerson.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fordFulkerson.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fordFulkerson.h" beforeDir="false" afterPath="$PROJECT_DIR$/fordFulkerson.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +75,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Baseball_Elimination" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/data/input/teams4a.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Baseball_Elimination" TARGET_NAME="Baseball_Elimination" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Baseball_Elimination" RUN_TARGET_NAME="Baseball_Elimination">
+    <configuration name="Baseball_Elimination" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$PROJECT_DIR$/data/input/teams4.txt" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Baseball_Elimination" TARGET_NAME="Baseball_Elimination" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Baseball_Elimination" RUN_TARGET_NAME="Baseball_Elimination">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -104,7 +92,7 @@
       <workItem from="1574896618464" duration="73000" />
       <workItem from="1574896693087" duration="168000" />
       <workItem from="1574896863595" duration="10153000" />
-      <workItem from="1575161426129" duration="41324000" />
+      <workItem from="1575161426129" duration="46540000" />
     </task>
     <servers />
   </component>
@@ -129,28 +117,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>203</line>
-          <option name="timeStamp" value="8" />
+          <line>218</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/fordFulkerson.cpp</url>
-          <line>14</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>85</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/fordFulkerson.cpp</url>
-          <line>62</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>115</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/fordFulkerson.cpp</url>
-          <line>32</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>69</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/fordFulkerson.cpp</url>
-          <line>47</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/main.cpp</url>
+          <line>49</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

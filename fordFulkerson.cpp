@@ -7,7 +7,7 @@
 
 using namespace std;
 
-fordFulkerson ::fordFulkerson(flowGraph network, int source, int terget) {
+fordFulkerson ::fordFulkerson(flowGraph &network, int source, int terget) {
 
     marked.resize(network.num_of_vertices, false);
     edge_to.resize(network.num_of_vertices);
@@ -33,6 +33,7 @@ fordFulkerson ::fordFulkerson(flowGraph network, int source, int terget) {
         network = updateFlowGraph(network,aug_path);
         aug_path.clear();
         edge_to.clear();
+        marked[terget] = false;
     }
 }
 
@@ -48,7 +49,7 @@ bool fordFulkerson ::hasAugmentingPath(flowGraph network, int source, int sink) 
         for(flowEdge edge : network.returnConnections(v)){
             int w = edge.other(v);
 
-            if(edge.resuidalCapacityto(w) > 0 && !marked[w]){
+            if(edge.capacity > 0 && !marked[w]){
                 edge.parent = v;
                 edge_to[w] = edge;
                 marked[w] = true;

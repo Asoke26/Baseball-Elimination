@@ -20,7 +20,7 @@ public:
     vector<flowEdge> edge_to;
     int bottle_neck;
 
-    fordFulkerson(flowGraph network, int source, int terget);
+    fordFulkerson(flowGraph &network, int source, int terget);
 
     bool hasAugmentingPath(flowGraph network,int source,int sink);
 

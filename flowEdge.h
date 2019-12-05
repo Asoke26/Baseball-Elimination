@@ -13,7 +13,6 @@ public:
     int capacity;
     int flow;
     int parent;
-
     flowEdge(){
         this->from = from;
         this->to = to;
