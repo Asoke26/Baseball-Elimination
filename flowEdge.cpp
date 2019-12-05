@@ -9,6 +9,7 @@ flowEdge :: flowEdge(int from,int to,int capacity,int flow){
     this->to = to;
     this->capacity = capacity;
     this->flow = flow;
+    this->parent = -999;
 }
 
 int flowEdge :: resuidalCapacityto(int vertex){
@@ -19,4 +20,9 @@ int flowEdge :: resuidalCapacityto(int vertex){
 void flowEdge :: addResidualFLowto(int vertex , int delta){
     if (vertex == this->from) this->flow -= delta;
     else if (vertex == this->to) this->flow +=delta;
+}
+
+int flowEdge ::other(int vertex) {
+    if (vertex == from) return to;
+    else if(vertex == to) return from;
 }

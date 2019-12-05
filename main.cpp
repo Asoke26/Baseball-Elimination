@@ -8,6 +8,7 @@
 
 #include "flowEdge.h"
 #include "flowGraph.h"
+#include "fordFulkerson.h"
 
 using namespace std;
 
@@ -153,24 +154,28 @@ void trivialElimination()
 
 void buildFlowNetwork(int id)
 {
-    int source = -1;
-    int sink = 100;
+    int source = NUM_OF_TEAMS; //128
+    int sink = NUM_OF_TEAMS+1;//100;
+    int number_of_nodes = 2;
+    int gameNode = NUM_OF_TEAMS+2;
 
     int possibleMaxWin = wins[id] + remaining[id];
     vector<flowEdge> all_edges;
 
+    cout<<"Source Sink "<<source<<" "<<sink<<endl;
     for(int i=0;i<NUM_OF_TEAMS;i++){
         if(i == id || wins[i]+remaining[i] < MAX_NUM_WINS || i+1 == NUM_OF_TEAMS) continue;
         for(int j=i+1;j<NUM_OF_TEAMS;j++)
         {
             if(j == id || wins[i]+remaining[i] < MAX_NUM_WINS) continue;
             cout<<"I "<<i<<" J"<<j<<endl;
-            int gameNode = i+NUM_OF_TEAMS+j;
+            cout<<"Game Node "<<gameNode<<endl;
 
             all_edges.push_back(flowEdge(source,gameNode,games[i][j],0));
             all_edges.push_back(flowEdge(gameNode,i,INT8_MAX,0));
             all_edges.push_back(flowEdge(gameNode,j,INT8_MAX,0));
-
+            number_of_nodes++;
+            gameNode++;
         }
     }
 
@@ -178,11 +183,25 @@ void buildFlowNetwork(int id)
     {
         if(i == id )continue;
         all_edges.push_back(flowEdge(i,sink,possibleMaxWin-wins[i],0));
+        number_of_nodes++;
     }
 
 
     for(flowEdge edge : all_edges){
         cout<<"source "<<edge.from<<" terget "<<edge.to<<" capacity "<<edge.capacity<<" flow "<<edge.flow<<endl;
     }
+
+    cout<<"Number of nodes "<<number_of_nodes<<endl;
+    flowGraph flow_network(number_of_nodes+1);
+
+    for (int i=0 ;i <all_edges.size();i++)
+    {
+        flow_network.addEdge(all_edges[i]);
+    }
+    cout<<"Number of edges :"<<flow_network.num_of_edges<<endl;
+
+
+    fordFulkerson ff(flow_network, source,sink);
+
 
 }

@@ -12,12 +12,22 @@ public:
     int to;
     int capacity;
     int flow;
+    int parent;
+
+    flowEdge(){
+        this->from = from;
+        this->to = to;
+        this->capacity = capacity;
+        this->flow = flow;
+    }
 
     flowEdge(int from,int to,int capacity,int flow);
 
     int resuidalCapacityto(int vertex);
 
     void addResidualFLowto(int vertex , int delta);
+
+    int other(int vertex);
 };
 
 
