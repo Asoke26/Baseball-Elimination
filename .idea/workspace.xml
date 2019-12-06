@@ -13,17 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="826e7a27-cf4d-4e21-a412-31d27a48fcc2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Baseball_Elimination" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowEdge.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowEdge.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowGraph.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/flowGraph.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/fordFulkerson.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/flowEdge.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowEdge.h" beforeDir="false" afterPath="$PROJECT_DIR$/flowEdge.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flowGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/flowGraph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fordFulkerson.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fordFulkerson.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +84,7 @@
       <workItem from="1574896693087" duration="168000" />
       <workItem from="1574896863595" duration="10153000" />
       <workItem from="1575161426129" duration="46540000" />
-      <workItem from="1575590257665" duration="10696000" />
+      <workItem from="1575590257665" duration="11758000" />
     </task>
     <servers />
   </component>
