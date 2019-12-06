@@ -9,7 +9,6 @@ flowEdge :: flowEdge(int from,int to,int capacity,int flow){
     this->to = to;
     this->capacity = capacity;
     this->flow = flow;
-    this->parent = -999;
 }
 
 int flowEdge :: resuidalCapacityto(int vertex){

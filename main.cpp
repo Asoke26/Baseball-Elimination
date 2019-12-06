@@ -30,6 +30,9 @@ bool buildFlowNetwork(int id);
 
 int main(int argc, char *argv[]) {
 
+    vector<int> eliminated;
+    vector<int> survived;
+
     /************************** Start Input file Preprocessing*********************************************/
     ifstream infile;
     infile.open(argv[1]);
@@ -85,23 +88,23 @@ int main(int argc, char *argv[]) {
     /***************************End Input file Processing************************************************/
 
 
-    for(int i = 0; i<wins.size();i++)
-    {
-        cout<<wins[i]<<"-";
-    }
-    cout<<endl;
-//
-//    for(int i = 0; i<losses.size();i++)
+//    for(int i = 0; i<wins.size();i++)
 //    {
-//        cout<<losses[i]<<"-";
+//        cout<<wins[i]<<"-";
 //    }
 //    cout<<endl;
-//
-    for(int i = 0; i<remaining.size();i++)
-    {
-        cout<<remaining[i]<<"-";
-    }
-    cout<<endl;
+////
+////    for(int i = 0; i<losses.size();i++)
+////    {
+////        cout<<losses[i]<<"-";
+////    }
+////    cout<<endl;
+////
+//    for(int i = 0; i<remaining.size();i++)
+//    {
+//        cout<<remaining[i]<<"-";
+//    }
+//    cout<<endl;
 //
 //    for(int i = 0; i<games.size();i++)
 //    {
@@ -118,7 +121,7 @@ int main(int argc, char *argv[]) {
 
     for(int i = 0; i<isEliminated.size();i++)
     {
-        if(isEliminated[i]) cout<<"Team "<<i<<" is eliminated "<<endl;
+        if(isEliminated[i]) eliminated.push_back(i);
     }
     cout<<endl;
 
@@ -128,17 +131,29 @@ int main(int argc, char *argv[]) {
         if(isEliminated[i] ==1) continue;
         else{
             bool result = buildFlowNetwork(i);
-            if(result == true)cout<<"Team "<<i<<" is not eliminated "<<endl;
-            else cout<<"Team "<<i<<" is eliminated "<<endl;
+            if(result == true)survived.push_back(i);
+            else eliminated.push_back(i);
         }
     }
 
+    // Checked Input : 4,4a,12,60,8
+    cout<<"###############################Teams Eliminated###############################"<<endl;
+    sort(eliminated.begin(),eliminated.end());
+    if(eliminated.size() ==0) cout<<"-1"<<endl;
+    else{
+        for(int i=0;i<eliminated.size();i++){
+            cout<<eliminated[i]<<" ";
+        }
+        cout<<endl;
+    }
 
-    // 3. RUN Ford Fulkerson
-        // 3.1 Constructor (Algo) - If has augmenting path. Then save it. Find the bottleneck and update the graph
-        // 3.2 Has Augmenting Path
-        // 3.3 Update Flowgraph
-    // 4. Check If all path are saturated for that team
+
+    cout<<"###############################Teams Not Eliminated###############################"<<endl;
+    sort(survived.begin(),survived.end());
+    for(int i=0;i<survived.size();i++){
+        cout<<survived[i]<<" ";
+    }
+    cout<<endl;
 
     return 0;
 }
@@ -149,7 +164,7 @@ int main(int argc, char *argv[]) {
 void trivialElimination()
 {
     int MAX_WINS = *max_element(wins.begin(),wins.end());
-    cout<<"Max Wins "<<MAX_WINS<<endl;
+//    cout<<"Max Wins "<<MAX_WINS<<endl;
 
     for(int i =0; i < NUM_OF_TEAMS; i++)
     {

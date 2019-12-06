@@ -12,28 +12,34 @@ fordFulkerson ::fordFulkerson(flowGraph &network, int source, int terget) {
     marked.resize(network.num_of_vertices, false);
     edge_to.resize(network.num_of_vertices);
 
-    while (hasAugmentingPath(network,source,terget) && marked[terget]){
+    while (hasAugmentingPath(network,source,terget)){
+        if(!marked[terget]) break;
         // Find the augmenting path and bottleneck
         vector<flowEdge> aug_path;
         bottle_neck =99999;
 
-        for(int current = terget; current!=source;current= edge_to[current].other(current)){
+        vector<bool> visited(network.num_of_vertices,false);
+        int current = terget;
+
+//        for(int i=0; i<edge_to.size();i++){
+//            cout<<"TO "<<edge_to[i].to<<" FROM "<<edge_to[i].from<<endl;
+//        }
+
+        while( current!=source){
             if(edge_to[current].to == 0 && edge_to[current].from == 0) continue;
             aug_path.push_back(edge_to[current]);
             if(bottle_neck > edge_to[current].capacity)bottle_neck = edge_to[current].capacity;
-//            cout<<"----- Aug Path --- "<<edge_to[current].to<<" "<<edge_to[current].from<<endl;
+            current= edge_to[current].other(current);
         }
-//        cout<<"Size of augmenting path "<<aug_path.size()<<bottle_neck<<endl;
-//        for(int i =0;i<edge_to.size();i++){
-//            cout<<"Edge to --- "<<edge_to.size()<<"  ---- "<<edge_to[i].to<<" "<<edge_to[i].from<<endl;
-//        }
+
 
 
         // Update the flowGraph
         network = updateFlowGraph(network,aug_path);
         aug_path.clear();
         edge_to.clear();
-        marked[terget] = false;
+        marked.clear();
+        marked.resize(network.num_of_vertices, false);
     }
 }
 
@@ -41,23 +47,32 @@ bool fordFulkerson ::hasAugmentingPath(flowGraph network, int source, int sink) 
     queue<int> bfs_queue;
     bfs_queue.push(source);
     marked[source] = true;
+    bool check;
+    bool ch = marked[sink];
 
     while(!bfs_queue.empty() && !marked[sink]){
         int v = bfs_queue.front();
+//        marked[v] = true;
+
         bfs_queue.pop();
 
         for(flowEdge edge : network.returnConnections(v)){
             int w = edge.other(v);
-
+            check = marked[w];
             if(edge.capacity > 0 && !marked[w]){
-                edge.parent = v;
                 edge_to[w] = edge;
                 marked[w] = true;
                 bfs_queue.push(w);
             }
+            else if(edge.capacity > 0 && !marked[v] && v == sink){
+                edge_to[v] = edge;
+                marked[v] = true;
+            }
         }
 
     }
+
+
     return marked[sink];
 }
 

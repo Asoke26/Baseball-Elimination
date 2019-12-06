@@ -12,7 +12,7 @@ flowGraph :: flowGraph(int num_of_vertices){
 
 void flowGraph :: addEdge(flowEdge e){
     adjList[e.from].push_back(e);
-    adjList[e.to].push_back(e);
+//    adjList[e.to].push_back(e);
     this->num_of_edges ++;
 }
 std::vector<flowEdge> flowGraph :: returnConnections(int vertex){
