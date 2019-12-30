@@ -1,7 +1,3 @@
-//
-// Created by ad26 on 12/3/19.
-//
-
 #include "flowGraph.h"
 
 flowGraph :: flowGraph(int num_of_vertices){

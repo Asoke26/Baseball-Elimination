@@ -1,7 +1,3 @@
-//
-// Created by ad26 on 12/3/19.
-//
-
 #include "flowEdge.h"
 
 flowEdge :: flowEdge(int from,int to,int capacity,int flow){

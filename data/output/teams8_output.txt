@@ -1,8 +1,0 @@
-Dartmouth is not eliminated
-Yale is eliminated by the subset of R = { Brown Cornell Penn Columbia Princeton Dartmouth }
-Princeton is not eliminated
-Columbia is not eliminated
-Penn is not eliminated
-Cornell is not eliminated
-Harvard is eliminated by the subset of R = { Brown Cornell Penn Columbia Princeton Dartmouth }
-Brown is not eliminated

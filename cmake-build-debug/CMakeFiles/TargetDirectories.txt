@@ -1,3 +1,0 @@
-/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/CMakeFiles/Baseball_Elimination.dir
-/home/ad26/Projects/Fall-19/EECS-278/Baseball-Elimination/cmake-build-debug/CMakeFiles/edit_cache.dir

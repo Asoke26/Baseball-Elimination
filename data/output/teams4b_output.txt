@@ -1,4 +1,0 @@
-Gryffindor is not eliminated
-Slytherin is eliminated by the subset of R = { Gryffindor }
-Ravenclaw is eliminated by the subset of R = { Gryffindor }
-Hufflepuff is eliminated by the subset of R = { Gryffindor }

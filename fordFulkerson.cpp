@@ -1,7 +1,3 @@
-//
-// Created by ad26 on 12/4/19.
-//
-
 #include <iostream>
 #include "fordFulkerson.h"
 
@@ -21,18 +17,12 @@ fordFulkerson ::fordFulkerson(flowGraph &network, int source, int terget) {
         vector<bool> visited(network.num_of_vertices,false);
         int current = terget;
 
-//        for(int i=0; i<edge_to.size();i++){
-//            cout<<"TO "<<edge_to[i].to<<" FROM "<<edge_to[i].from<<endl;
-//        }
-
         while( current!=source){
             if(edge_to[current].to == 0 && edge_to[current].from == 0) continue;
             aug_path.push_back(edge_to[current]);
             if(bottle_neck > edge_to[current].capacity)bottle_neck = edge_to[current].capacity;
             current= edge_to[current].other(current);
         }
-
-
 
         // Update the flowGraph
         network = updateFlowGraph(network,aug_path);
@@ -47,19 +37,16 @@ bool fordFulkerson ::hasAugmentingPath(flowGraph network, int source, int sink) 
     queue<int> bfs_queue;
     bfs_queue.push(source);
     marked[source] = true;
-    bool check;
-    bool ch = marked[sink];
+
 
     while(!bfs_queue.empty() && !marked[sink]){
         int v = bfs_queue.front();
-//        marked[v] = true;
 
         bfs_queue.pop();
 
         for(flowEdge edge : network.returnConnections(v)){
             int w = edge.other(v);
-            check = marked[w];
-            if(edge.capacity > 0 && !marked[w]){
+             if(edge.capacity > 0 && !marked[w]){
                 edge_to[w] = edge;
                 marked[w] = true;
                 bfs_queue.push(w);

@@ -1,7 +1,3 @@
-//
-// Created by ad26 on 12/3/19.
-//
-
 #ifndef BASEBALL_ELIMINATION_FLOWGRAPH_H
 #define BASEBALL_ELIMINATION_FLOWGRAPH_H
 
