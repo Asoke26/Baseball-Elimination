@@ -8,7 +8,7 @@ Baseball Elimination is a classic problem of MaxFlow Mincut algorithm. Given the
 In the baseball elimination problem, there is a league consisting of N teams. At some point during the season, team i has w_i wins and r_ij games left to play against team j. A team is eliminated if it cannot possibly finish the season in first place or tied for first place. The goal is to determine exactly which teams are eliminated.</p>
 
 <p align="center">
-  <img width=auto height=auto src="https://github.com/Asoke26/Baseball-Elimination/blob/master/data/figures/1.PNG">
+  <img width=auto height=auto src="https://github.com/Asoke26/Baseball-Elimination/blob/master/sample.png">
 </p>
  <br />
 Figure 1: Sample Point table
